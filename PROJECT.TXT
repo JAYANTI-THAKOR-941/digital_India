@@ -1,0 +1,12 @@
+npm init -y
+
+install:
+    npm i express mongoose dotenv cors jsonwebtoken
+
+    npm i nodemon -D
+
+stripts:
+package.json
+
+    "start":"node index.js",
+    "dev":"nodemon index.js"
