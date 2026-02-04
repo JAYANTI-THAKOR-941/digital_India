@@ -12,6 +12,11 @@ app.use(express.json());
 app.use(cors());
 
 
+// import routes
+import userRoutes from './routes/userRoutes.js'
+
+app.use('/api/user',userRoutes);
+
 connectDB();
 
 app.get('/',(req,res)=>{
