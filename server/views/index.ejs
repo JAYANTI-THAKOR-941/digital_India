@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usermanagement</title>
+    <style>
+        table{
+            width: 80%;
+            margin: 4% auto;
+        }
+        tr,td,th,table{
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        <h1>Usermanagement</h1>
+    </h1>
+    <a href="#">Add User</a>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th colspan="2">Action</th>
+        </tr>
+            <% users.forEach(u=>{ %>
+                <tr>
+                    <td><%= u.id %></td>
+                    <td><%= u.name %></td>
+                    <td><%= u.email %></td>
+                    <td><%= u.role %></td>
+                    <td><a href="#">Edit</a></td>
+                    <td><a href=/api/user/delete-user/<%= u.id %> >Delete</a></td>
+                </tr>
+            <% }); %>
+    </table>
+</body>
+</html>

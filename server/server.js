@@ -2,6 +2,9 @@ import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import connectDB from './config/db.js';
+import { fileURLToPath } from 'node:url';
+import { dirname } from 'node:path';
+import path from 'node:path';
 
 dotenv.config();
 
@@ -10,6 +13,15 @@ const app = express();
 // middlewares
 app.use(express.json());
 app.use(cors());
+
+
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+
+app.set('view engine','ejs');
+app.set('views',path.join(__dirname,'views'))
 
 
 // import routes
