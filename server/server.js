@@ -24,10 +24,6 @@ app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'views'))
 
 
-// import routes
-import userRoutes from './routes/userRoutes.js'
-
-app.use('/api/user',userRoutes);
 
 connectDB();
 
