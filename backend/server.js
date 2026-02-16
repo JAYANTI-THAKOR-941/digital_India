@@ -18,9 +18,11 @@ app.use(express.json());
 
 
 // import routes
-import userRoutes from './routes/userRoutes.js'
+import userRoutes from './routes/userRoutes.js';
+import productRoutes from './routes/productRoutes.js'
 
 app.use('/api/user',userRoutes);
+app.use('/api/product',productRoutes);
 
 
 
