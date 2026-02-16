@@ -16,6 +16,7 @@ const PORT = process.env.PORT || 3000
 // middlewares
 app.use(express.json());
 
+
 // import routes
 import userRoutes from './routes/userRoutes.js'
 
